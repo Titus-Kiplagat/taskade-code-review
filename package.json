@@ -1,28 +1,30 @@
 {
-  "name": "webpack-setup",
+  "name": "taskade",
   "version": "1.0.0",
   "description": "",
   "private": "true",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Titus-Kiplagat/webpack-setup.git"
+    "url": "git+https://github.com/Titus-Kiplagat/Taskade.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Titus-Kiplagat/webpack-setup/issues"
+    "url": "https://github.com/Titus-Kiplagat/Taskade/issues"
   },
-  "homepage": "https://github.com/Titus-Kiplagat/webpack-setup#readme",
-  "dependencies": {
-    "lodash": "^4.17.21"
-  },
+  "homepage": "https://github.com/Titus-Kiplagat/Taskade#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "css-loader": "^6.8.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.27.5",
+    "hint": "^2.0.0",
     "html-webpack-plugin": "^5.5.3",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
