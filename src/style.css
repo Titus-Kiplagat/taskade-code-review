@@ -1,3 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap");
+
+:root {
+  --body-font: "Lumanosimo", sans-serif;
+  --color-body: #e8f3f8;
+  --color-header: #061b25;
+  --color-text: var(--color-header);
+  --color-text-muted: #a4d0e3;
+  --color-input: #082937;
+  --color-input-lighter: #0b374a;
+  --color-secondary: #ff8c42;
+  --color-secondary-darker: #cc7035;
+  --color-secondary-lighter: #ffa368;
+  --color-tertiary: #1c89b8;
+  --color-text-badge: #e8f3f8;
+  --color-disabled: #d2e7f1;
+  --color-text-disabled: #77b8d4;
+  --global-border-radius: 6px;
+  --global-transition: all 0.2s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1.125rem;
+}
+
 body {
-    background-color: bisque;
+  font-family: var(--body-font);
+  background-color: var(--color-body);
+  color: var(--color-text);
+  display: grid;
+  place-content: center;
+}
+
+button,
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+}
+
+a {
+  color: var(--color-text);
+  transition: var(--global-transition);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+.container {
+  padding: 0 1.5rem;
+  max-height: 100vh;
+}
+
+.container,
+.wrapper {
+  margin-top: 3rem;
+}
+
+#main-header {
+  background-color: var(--color-header);
+  padding: 2rem 1rem;
+  border-radius: var(--global-border-radius);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button.refresh {
+  border: none;
+  border-radius: var(--global-border-radius);
+  font-weight: 700;
+  color: white;
+  background-color: var(--color-secondary);
+}
+
+.refresh svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+#todo-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#todo-form input {
+  flex-grow: 1;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  padding-left: 1rem;
+  font-family: var(--body-font);
+  transition: var(--global-transition);
+}
+
+#todo-form input::placeholder {
+  color: var(--color-text-muted);
+  font-family: var(--body-font);
+}
+
+#todo-form input:hover,
+#todo-form input:focus {
+  background-color: var(--color-input-lighter);
+}
+
+#todo-form button {
+  border: none;
+  padding: 1rem;
+  border-radius: var(--global-border-radius);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--color-secondary);
+  transition: var(--global-transition);
+}
+
+#todos li button {
+  border: none;
+  padding: 0.25rem;
+  font-size: 1rem;
+  display: grid;
+  place-content: center;
+  background-color: transparent;
+}
+
+#todo-form button:hover {
+  background-color: var(--color-secondary-darker);
+}
+
+#todo-form button:active {
+  background-color: var(--color-secondary-darker);
+}
+
+#todos {
+  margin-bottom: 1rem;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+#todos::-webkit-scrollbar {
+  display: none;
+}
+
+#todos li {
+  background-color: white;
+  border-radius: var(--global-border-radius);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-header);
+}
+
+#todos li div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#todos li div input[type="checkbox"] {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+#todos li.completed {
+  background-color: var(--color-disabled);
+  text-decoration: line-through;
+  color: var(--color-text-disabled);
+}
+
+#todos li div span {
+  padding: 0.2rem 1rem;
+  border-radius: var(--global-border-radius);
+  transition: var(--global-transition);
+}
+
+#todos li div span:focus {
+  background-color: var(--color-body);
+  outline: none;
+}
+
+#todos li div span[contenteditable]:hover {
+  background-color: var(--color-body);
+}
+
+#todos li button svg path {
+  transition: var(--global-transition);
+}
+
+#todos li button:hover svg path {
+  color: var(--color-text);
+}
+
+#todos li button:active svg {
+  transition: var(--global-transition);
+}
+
+#delete-all-btn {
+  font-size: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: var(--color-secondary);
+  color: white;
+  border-radius: var(--global-border-radius);
+  font-family: var(--body-font);
+}
+
+@media screen and (width >= 768px) {
+  .container {
+    width: 30rem;
+  }
 }
