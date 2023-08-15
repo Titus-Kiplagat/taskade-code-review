@@ -39,4 +39,4 @@ function renderList() {
   todosListItems.innerHTML = tasks.map(createListItem).join('');
 }
 
-renderList();
+document.addEventListener('DOMContentLoaded', () => renderList());
