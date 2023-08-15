@@ -33,3 +33,8 @@ function createListItem(task) {
     </li>
   `;
 }
+
+function renderList() {
+  const todosListItems = document.getElementById('todos');
+  todosListItems.innerHTML = tasks.map(createListItem).join('');
+}
