@@ -180,7 +180,7 @@ button.refresh {
   width: 1.5rem;
 }
 
-#todos li.completed {
+.completed {
   background-color: var(--color-disabled);
   text-decoration: line-through;
   color: var(--color-text-disabled);
