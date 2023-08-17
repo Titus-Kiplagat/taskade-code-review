@@ -1,6 +1,7 @@
 import createListMarkup from './createListMarkup.js';
 import tasks from './getTasks.js';
 import removeTask from './removeTask.js';
+import toggleTaskCompletion from './toggleTaskCompletion.js';
 import updateTaskDescription from './updateTask.js';
 
 const renderList = () => {
@@ -19,6 +20,14 @@ const renderList = () => {
   descriptionSpans.forEach((description, index) => {
     description.addEventListener('input', () => {
       updateTaskDescription(index, description.textContent);
+    });
+  });
+
+  const checkboxes = document.querySelectorAll('.checkbox');
+  checkboxes.forEach((checkbox, index) => {
+    checkbox.addEventListener('change', () => {
+      toggleTaskCompletion(index);
+      renderList();
     });
   });
 };

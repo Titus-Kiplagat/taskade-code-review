@@ -1,7 +1,7 @@
 const createListMarkup = (task) => `
-    <li ${task.Complete ? 'class="complete"' : ''}>
+    <li class="${task.complete ? 'completed' : ''}">
       <div>
-        <input type="checkbox" name="tasks" ${task.Complete ? 'checked' : ''
+        <input class="checkbox" type="checkbox" name="tasks" ${task.complete ? 'checked' : ''
 } id="${task.index}" />
         <span ${!task.complete ? 'contenteditable' : ''}>${task.description}</span>
       </div>

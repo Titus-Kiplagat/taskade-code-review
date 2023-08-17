@@ -61,6 +61,11 @@
 - Implemented a function for deleting a task (remove an element from the array).
 - Implemented a function for editing task descriptions.
 - All changes to the To Do List should be saved in local storage.
+- Added a new JavaScript file and import it as a module that contain methods related to the status updates (completed: true / false).
+- Added event listener to the checkbox (change).
+- Updated items object's value for completed key upon user actions.
+- Implemented a function for the "Clear all completed" button (use filter() method).
+- Stored the updated array of items in local storage, so the user gets the correct list of values after the page reloads (which means that any changes made to the list should be preserved).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,12 +145,7 @@ Start the project
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add a new JavaScript file and import it as a module:
-  - it will contain methods related to the status updates (completed: true / false).
-- Add event listener to the checkbox (change).
-- Update items object's value for completed key upon user actions.
-- Implement a function for the "Clear all completed" button (use filter() method).
-- Store the updated array of items in local storage, so the user gets the correct list of values after the page reloads (which means that any changes made to the list should be preserved).
+- Improve the looks and design of the to-do list app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
