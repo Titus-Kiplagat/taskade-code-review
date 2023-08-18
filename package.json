@@ -5,7 +5,8 @@
   "private": "true",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Titus-Kiplagat/Taskade/issues"
   },
-  "homepage": "https://github.com/Titus-Kiplagat/Taskade#readme",
+  "homepage": "https://titus-kiplagat.github.io/Taskade",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.8.1",
@@ -30,5 +31,8 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
