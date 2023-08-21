@@ -69,6 +69,14 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## 🔭 Live Demo <a name="future-features"></a>
+
+[Live Demo](https://titus-kiplagat.github.io/Taskade/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 ## 💻 Getting Started <a name="getting-started"></a>
 To get a local copy up and running, follow these steps.
